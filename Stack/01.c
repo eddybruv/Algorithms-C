@@ -48,7 +48,7 @@ int pop(struct Stack* stack){
     return stack->array[stack->top--];
 }
 
-//funtion to return the top from stack without removing it
+//function to return the top from stack without removing it
 int peek(struct Stack* stack){
     if(isEmpty(stack))
         return INT_MIN;
