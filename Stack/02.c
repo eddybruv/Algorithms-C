@@ -58,7 +58,8 @@ bool isFull(void){
 }
 
 void push(int num){
-    if(isFull()){
+    if(isFull()) //overflow condition
+    {
         printf("Stack is full\n");
         return;
     }
@@ -66,7 +67,8 @@ void push(int num){
 }
 
 int pop(void){
-    if(isEmpty()){
+    if(isEmpty()) //underflow condition
+    {
         printf("Stack is empty\n");
         return 0;
     }
