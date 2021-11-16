@@ -1,6 +1,6 @@
 /**
  * Date: 14-11-2021
- * by eddubruv
+ * by eddybruv
  * 
  * Topic: Creating a linked list.
  **/
