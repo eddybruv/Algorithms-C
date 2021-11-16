@@ -51,4 +51,15 @@ int main(void){
     head->next->next->next->next->next = createnode(90);
 
     traverse(head);
+    return 0;
 }
+
+/**
+ * Time Complexity:
+ * 
+ * O(n), for scanning the list of size n
+ * 
+ * Space Complexity
+ * 
+ * O(1), no additional memory required
+ **/
