@@ -67,11 +67,44 @@ void deleteAtGivenPos(struct Node **head, int n){
     deleteNode(head, current);
 }
 
+void push(struct Node **head, int data){
+    struct Node *new_node;
+    new_node = malloc(sizeof(struct Node));
+
+    new_node->data = data;
+    
+    new_node->prev = NULL;
+    new_node->next = (*head);
+
+    if((*head) != NULL)
+        (*head)->prev = new_node;
+    
+    *head = new_node;
+}
+
 void printList (struct Node *head){
     while (head != NULL){
         printf("%d -> ", head->data);
-        head = head->data;
+        head = head->next;
     }
-
     printf("NULL\n");
+}
+
+int main(void){
+    struct Node *head = NULL;
+
+    push(&head, 5);
+    push(&head, 2);
+    push(&head, 4);
+    push(&head, 8);
+    push(&head, 10);
+
+    printf("List before: ");
+    printList(head);
+
+    deleteAtGivenPos(&head, 4);
+    printf("List after: ");
+    printList(head);
+
+    return 0;
 }
