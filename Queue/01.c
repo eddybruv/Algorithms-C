@@ -42,7 +42,7 @@ int main(void){
                 printQueue();
                 break;
             case 'q':
-                printf("Bye!");
+                printf("Bye! ");
                 return 0;
             default: 
                 printf("Invalid command.\n");
